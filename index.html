@@ -108,7 +108,7 @@
       //   const canvas = document.getElementById("canvas");
       //   const ctx = canvas.getContext("2d");
          const imageData = context.getImageData(0, 0, 600, 500); // names const imageData which gets first image
-         blue = imageData.data[2];
+      /*   blue = imageData.data[2];
    //      context2.putImageData(imageData, 0, 0); // puts processed image on canvas2
 
          if (blue > 0 && blue < 255) { // pixel is blue
@@ -120,9 +120,23 @@
            data[0] = 255; // red is set to 100%
            data[1] = 255; // green is set to 100%
           // resulting color is white
-         }
+         } */
+
+        for (let i = 0; i < length; i += 4) { // red, green, blue, and alpha
+          const r = data[i + 0];
+          const g = data[i + 1];
+          const b = data[i + 2];
+          const a = data[i + 3];
+
+        if (b === 255) { // pixel is blue
+            data[i + 0] = 255; // red is set to 100%
+            data[i + 1] = 255; // green is set to 100%
+            // resulting color is white
+        }
+    }
  
          context2.putImageData(imageData, 0, 0)
+         
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
           
