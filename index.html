@@ -109,7 +109,7 @@
       //   const ctx = canvas.getContext("2d");
          const imageData = context.getImageData(0, 0, 600, 500); // names const imageData which gets first image
          blue = imageData.data[0];
-         context2.putImageData(blue, 0, 0); // puts processed image on canvas2
+         context2.putImageData(imageData, 0, 0); // puts processed image on canvas2
 
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
