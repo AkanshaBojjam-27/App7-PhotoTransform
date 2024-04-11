@@ -100,7 +100,7 @@
           down in the HTML part of the file just under the first <canvas> tag. If we weren't worried about fixing an iPhone bug we would use
           context.drawImage(image, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500) instead of drawImageIOSFix */
         
-          drawImageIOSFix(myContext,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
+          drawImageIOSFix(context,img, 0, 0, img.naturalWidth, img.naturalHeight, 0, 0, 600, 500);
 
           /*  +++++++++++++++ BEGIN IMAGE PROCESSING +++++++++++++++ */
           /*  ++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
@@ -146,11 +146,11 @@
       
       <canvas id="myCanvas" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
       <script> /* This script initiates the cavas and puts the text on the canvas "myCanvas" */
-        var myCanvas = document.getElementById('myCanvas');
-        var myContext = canvas.getContext("2d");
-        myContext.font = '20pt Calibri';
-        myContext.fillStyle = "black";
-        myContext.fillText("Original image will go here", 10, 20);
+        var canvas = document.getElementById('myCanvas');
+        var context = canvas.getContext("2d");
+        context.font = '20pt Calibri';
+        context.fillStyle = "black";
+        context.fillText("Original image will go here", 10, 20);
       </script>
 
      <canvas id="myCanvas2" width=600 height=500 style="border:1px solid #d3d3d3;"></canvas>
