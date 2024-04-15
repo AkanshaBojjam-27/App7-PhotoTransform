@@ -128,7 +128,7 @@
           const b = data[i + 2];
           const a = data[i + 3];
 
-        if (b === 255) { // pixel is blue
+        if (r === 255 && g === 255 && b === 0 && a === 255) { // pixel is not blue
             data[i + 0] = 255; // red is set to 100%
             data[i + 1] = 255; // green is set to 100%
             // resulting color is white
