@@ -125,11 +125,11 @@
          var i;
 
           for (i = 0; i < pixels.length; i += 4) {
-        // Is this pixel *red* ?, testing for red first
+        // Is this pixel *blue* ?
            if (pixels[i] > 100) {
             pixels[i] = 255;
+            pixels[i + 0] = 255;
             pixels[i + 1] = 255;
-            pixels[i + 2] = 255;
           }
         }
          
