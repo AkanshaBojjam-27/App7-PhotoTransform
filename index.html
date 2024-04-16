@@ -124,14 +124,11 @@
          const pixels = imageData.data
          var i;
 
-          for (i = 0; i < pixels.length; i += 3) {
-        // Is this pixel *red* ?
-           if (pixels[i] > 100) {
-            pixels[i] = 0;
-            pixels[i + 1] = 0;
-            pixels[i + 2] = 255; 
-          }
+          for (i = 0; i < pixels.length; i += 4) {  // runs through all the pixels of first canvas
+          data[i] = 0; // sets red to 0 
+          data[i + 1] = 0; // sets green to 0
         }
+        
          
    /*(     for (let i = 0; i < length; i += 4) { // red, green, blue, and alpha
           const r = data[i + 0];
