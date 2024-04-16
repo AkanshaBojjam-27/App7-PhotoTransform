@@ -107,7 +107,32 @@
 
       //   const canvas = document.getElementById("canvas");
       //   const ctx = canvas.getContext("2d");
-      /*   blue = imageData.data[2];
+     
+         var imageData = context.getImageData(0, 0, 600, 500); // names const imageData which gets first image
+         var pixels = imageData.data
+         var i;
+
+          for (i = 0; i < pixels.length; i += 4) {  // runs through all the pixels of first canvas
+          data[i] = 0; // sets red to 0 
+          data[i + 1] = 0; // sets green to 0
+        }
+        
+         context2.putImageData(imageData, 0, 0) // prints processed image onto canvas 2
+         
+   /* The following code are all image processing attempts that didn't work. 
+        (     for (let i = 0; i < length; i += 4) { // red, green, blue, and alpha
+          const r = data[i + 0];
+          const g = data[i + 1];
+          const b = data[i + 2];
+          const a = data[i + 3];
+
+        if (r === 255 && g === 255 && b === 0 && a === 255) { // pixel is not blue
+            data[i + 0] = 255; // red is set to 100%
+            data[i + 1] = 255; // green is set to 100%
+            // resulting color is white 
+        } 
+
+         blue = imageData.data[2];
    //      context2.putImageData(imageData, 0, 0); // puts processed image on canvas2
 
          if (blue > 0 && blue < 255) { // pixel is blue
@@ -119,31 +144,9 @@
            data[0] = 255; // red is set to 100%
            data[1] = 255; // green is set to 100%
           // resulting color is white
-         } */
-         const imageData = context.getImageData(0, 0, 600, 500); // names const imageData which gets first image
-         const pixels = imageData.data
-         var i;
-
-          for (i = 0; i < pixels.length; i += 4) {  // runs through all the pixels of first canvas
-          data[i] = 0; // sets red to 0 
-          data[i + 1] = 0; // sets green to 0
-        }
-        
          
-   /*(     for (let i = 0; i < length; i += 4) { // red, green, blue, and alpha
-          const r = data[i + 0];
-          const g = data[i + 1];
-          const b = data[i + 2];
-          const a = data[i + 3];
-
-        if (r === 255 && g === 255 && b === 0 && a === 255) { // pixel is not blue
-            data[i + 0] = 255; // red is set to 100%
-            data[i + 1] = 255; // green is set to 100%
-            // resulting color is white 
-        } 
     } */
- 
-         context2.putImageData(imageData, 0, 0) // prints processed image onto canvas 2
+
          
           /* PUT ANY CHANGES TO THE JAVASCRIPT HERE  */
           
